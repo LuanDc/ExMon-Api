@@ -1,0 +1,10 @@
+ex_mon:
+  image: postgres
+  container_name: ex_mon_db
+  environment:
+    POSTGRES_USER: exmon
+    POSTGRES_PASSWORD: exmon
+  volumes:
+    - ./data:/data/postgres
+  ports:
+    - '5432:5432'
